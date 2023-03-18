@@ -1,0 +1,40 @@
+
+/* searchbar style */
+
+.containerInput {
+    background-color: rgb(217, 171, 178);
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0 0 4px 0;
+    z-index: 1;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+  
+  .containerInput_input {
+    width: 300px;
+    height: 50px;
+    color: #234567; 
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border: none;
+    padding: 12px;
+    background-color: rgb(217, 171, 178);
+    outline:none;
+  }
+  
+  .containerInput_input::placeholder {
+    color: #234567; 
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  
+  .containerInput_input:focus::placeholder {
+    color: #999;
+  }

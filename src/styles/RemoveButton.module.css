@@ -1,0 +1,23 @@
+
+/* remove movie from liked button */
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin: 10px 0 0 95px;
+  }
+  
+  .button:hover {
+    background: linear-gradient(90deg, rgba(192,188,255,1) 0%, rgba(255,158,121,1) 51%, rgba(0,212,255,1) 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    color: black;
+  }
+  

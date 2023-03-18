@@ -1,0 +1,112 @@
+
+/* toolbar for liked videos page */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgb(192,188,255);
+  background: linear-gradient(90deg, rgba(192,188,255,1) 0%, rgba(255,158,121,1) 51%, rgba(0,212,255,1) 100%);
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+}
+
+.titleNav {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  padding-left: 0.5rem;
+  margin: 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+  }
+  
+  .card {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    width: 200px;
+    height: 300px;
+    --border-radius: 15px;
+    --border-width: 6px;
+    appearance: none;
+    position: relative;
+    padding: 1em 2em;
+    border: 0;
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color:white;
+    z-index: 2;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+   }
+   
+   .card::after {
+    --m-i: linear-gradient(#000, #000);
+    --m-o: content-box, padding-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background-image: conic-gradient(
+           #b0cfff,
+           #7bdcff,
+           #dfa2ff,
+           #f3b0ff,
+           #ff8bd8,
+           #a198ff,
+           #fbacff
+       );
+    -webkit-mask-image: var(--m-i), var(--m-i);
+    mask-image: var(--m-i), var(--m-i);
+    -webkit-mask-origin: var(--m-o);
+    mask-origin: var(--m-o);
+    /* pretty over warning */
+    -webkit-mask-clip: var(--m-o); 
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: rotate-hue linear 500ms infinite;
+    animation-play-state: paused;
+   }
+   
+   .card:hover::after {
+    animation-play-state: running;
+   }
+   
+   @keyframes rotate-hue {
+    to {
+     filter: hue-rotate(1turn);
+    }
+   }
+   
+   .card,
+   .card::after {
+    box-sizing: border-box;
+   }
+   
+   .card:active {
+    --border-width: 5px;
+   }
+  
+  .card img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .title {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  

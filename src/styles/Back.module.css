@@ -1,0 +1,19 @@
+
+/* return to home page button */
+
+.button {
+    background-color: transparent;
+    color: black;
+    padding: 13px 25px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: black;
+    color: white;
+  }
+  
